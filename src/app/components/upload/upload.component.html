@@ -1,0 +1,23 @@
+<div class="container mt-4">
+  <h2 class="mb-3">Upload PDF / CSV</h2>
+
+  <!-- Formulaire d'upload -->
+  <div class="mb-3">
+    <input type="file" class="form-control" (change)="onFileSelected($event)" />
+  </div>
+  <button class="btn btn-primary mb-4" (click)="upload()">Upload</button>
+
+  <!-- Liste des fichiers -->
+  <div *ngIf="files.length > 0">
+    <h3 class="mb-3">Fichiers sauvegardés :</h3>
+    <ul class="list-group">
+      <li class="list-group-item d-flex justify-content-between align-items-center" *ngFor="let file of files">
+        {{ file }}
+        <div>
+          <button class="btn btn-sm btn-success me-2" (click)="downloadFile(file)">Download</button>
+          <button class="btn btn-sm btn-danger" (click)="deleteFile(file)">Delete</button>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>

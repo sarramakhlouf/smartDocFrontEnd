@@ -1,0 +1,17 @@
+<div class="card p-3 h-100">
+  <div class="card-header bg-light">
+    <h5 class="mb-0">Historique des conversations</h5>
+  </div>
+
+  <div class="card-body overflow-auto" style="max-height: 400px;">
+    <div *ngFor="let msg of history" class="mb-2">
+      <div [ngClass]="msg.sender === 'user' ? 'alert alert-primary text-end mb-1' : 'alert alert-secondary text-start mb-1'">
+        {{ msg.text }}
+      </div>
+    </div>
+  </div>
+
+  <div class="card-footer text-center">
+    <button class="btn btn-secondary btn-sm" (click)="newConversation()" routerLink="/chat">Nouvelle conversation</button>
+  </div>
+</div>
