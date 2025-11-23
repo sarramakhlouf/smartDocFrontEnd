@@ -1,34 +1,87 @@
+/* Containers */
 .chat-container {
+  max-width: 1200px;
+}
+
+.sidebar-card {
+  border-radius: 15px;
+  overflow: hidden;
+  background: #f7f9fc;
+}
+
+.history-list li {
+  transition: 0.3s;
+  cursor: pointer;
+  border-left: 4px solid transparent;
+}
+.history-list li:hover {
+  background: #f0f4ff;
+  border-left: 4px solid #7873f5;
+}
+.history-list li.active {
+  background: #e0e7ff;
+  border-left: 4px solid #ff6ec4;
+  font-weight: bold;
+}
+
+/* Chat card */
+.chat-card {
+  border-radius: 15px;
+  background: #fefefe;
   display: flex;
   flex-direction: column;
-  height: 100%;
 }
 
-.messages {
-  flex: 1;
-  overflow-y: auto;
-  margin-bottom: 15px;
-}
-
-.message {
-  max-width: 60%;
-  padding: 10px;
-  margin: 8px;
-  border-radius: 8px;
-}
-
-.user {
-  background: #007bff;
-  color: white;
+/* Messages */
+.msg-user {
   align-self: flex-end;
+  background: linear-gradient(135deg, #ff6ec4, #7873f5);
+  color: white;
+  padding: 10px 15px;
+  border-radius: 20px 20px 0 20px;
+  margin: 5px 0;
+  max-width: 70%;
+  word-wrap: break-word;
+  animation: fadeIn 0.3s ease-in-out;
 }
 
-.ai {
-  background: #e3e3e3;
+.msg-bot {
   align-self: flex-start;
+  background: #e0e0e0;
+  color: #333;
+  padding: 10px 15px;
+  border-radius: 20px 20px 20px 0;
+  margin: 5px 0;
+  max-width: 70%;
+  word-wrap: break-word;
+  animation: fadeIn 0.3s ease-in-out;
 }
 
-.input-area {
-  display: flex;
-  gap: 10px;
+/* Input */
+.chat-input input {
+  border-radius: 20px 0 0 20px;
+}
+.chat-input .btn-gradient {
+  border-radius: 0 20px 20px 0;
+  background: linear-gradient(90deg, #ff6ec4, #7873f5);
+  color: white;
+  transition: 0.3s;
+}
+.chat-input .btn-gradient:hover {
+  background: linear-gradient(90deg, #7873f5, #ff6ec4);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {opacity:0; transform: translateY(10px);}
+  to {opacity:1; transform: translateY(0);}
+}
+
+/* Scrollbar styling */
+.messages::-webkit-scrollbar {
+  width: 6px;
+}
+.messages::-webkit-scrollbar-thumb {
+  background: #7873f5;
+  border-radius: 3px;
 }

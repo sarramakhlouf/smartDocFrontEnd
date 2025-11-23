@@ -1,0 +1,70 @@
+.upload-container {
+  max-width: 600px;
+  background: #f0f4f8;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+}
+
+.text-gradient {
+  background: linear-gradient(90deg, #ff6ec4, #7873f5);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.upload-box {
+  border: 2px dashed #7873f5;
+  border-radius: 15px;
+  padding: 40px;
+  text-align: center;
+  position: relative;
+  transition: 0.3s;
+  background: rgba(120, 115, 245, 0.05);
+}
+
+.upload-box:hover {
+  background: rgba(120, 115, 245, 0.15);
+  border-color: #ff6ec4;
+}
+
+.file-input {
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  cursor: pointer;
+}
+
+.drag-text {
+  font-size: 16px;
+  color: #555;
+}
+
+.btn-gradient {
+  background: linear-gradient(90deg, #ff6ec4, #7873f5);
+  border: none;
+  color: white;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.btn-gradient:hover {
+  background: linear-gradient(90deg, #7873f5, #ff6ec4);
+}
+
+.file-list .list-group-item {
+  border-radius: 10px;
+  margin-bottom: 10px;
+  transition: 0.3s;
+}
+
+.file-list .list-group-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.file-actions button i {
+  margin-right: 5px;
+}
